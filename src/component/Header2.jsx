@@ -7,10 +7,10 @@ import Sidebar from "./Sidebar";
 
 const Header2 = () => {
   const [show, setShow] = useState(false);
-  const [sidebar, setSidebar ] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
-  function openSidebar(){
-    setSidebar(true)
+  function openSidebar() {
+    setSidebar(true);
   }
 
   const handleClick = () => {
@@ -18,24 +18,37 @@ const Header2 = () => {
   };
 
   return (
-
     <header>
-      <img
-        className="nav-img"
-        src={Headerlogo}
-        alt="logo"
-        height={40}
-        width={40}
-      />
+      <div className="small-header">
+        <img
+          className="small-nav-img"
+          src={Headerlogo}
+          alt="logo"
+          height={40}
+          width={40}
+        />
+        <i onClick={openSidebar} className="fa-solid fa-bars"></i>
+      </div>
 
-<div className="hamburger">
-          <i onClick={openSidebar} className="fa-solid fa-bars"></i>
-        </div>
+      <img
+          className="nav-img"
+          src={Headerlogo}
+          alt="logo"
+          height={40}
+          width={40}
+        />
+
+      <div className="hamburger">
+        <i onClick={openSidebar} className="fa-solid fa-bars"></i>
+      </div>
+
       <nav>
         <ul>
           <li>
             <span>NEW</span>
-            <a className="hover-item" href="#0">Demos</a>
+            <a className="hover-item" href="#0">
+              Demos
+            </a>
           </li>
           <li>
             <a href="#0">Pages</a>
@@ -122,7 +135,7 @@ const Header2 = () => {
           </li>
         </ul>
       </nav>
-      
+
       <div className="nav-right">
         <i onClick={handleClick} class="fa-solid fa-magnifying-glass"></i>
         <Link to="/cart">
@@ -144,7 +157,7 @@ const Header2 = () => {
         </div>
       </div>
       <SearchPortal show={show} setShow={setShow} />
-      <Sidebar sidebar={sidebar} setSidebar={setSidebar}/>
+      <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
     </header>
   );
 };
