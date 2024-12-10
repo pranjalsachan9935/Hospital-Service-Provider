@@ -1,0 +1,193 @@
+/* Sidebar overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: 9998; /* Below the sidebar */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.sidebar-overlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+
+.sidebar {
+  width: 255px; /* Fixed width (adjust as needed) */
+  max-width: 500px; /* Optional max width */
+  height: 100vh; 
+  background-color: #16243d;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto; /* Enable scrolling for the sidebar */
+  z-index: 9999;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transform: translateX(-100%); /* Initially hidden */
+  transition: left 0.3s ease-in-out;  /* Smooth transition */
+}
+
+
+/* Sidebar visible state */
+.sidebar.open {
+  transform: translateX(0); /* Fully visible */
+}
+
+/* Header */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header img {
+  position: relative;
+  top: 10px;
+  height: 28px;
+  width: 130px;
+}
+
+.logo {
+  width: 100px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  position: relative;
+  bottom: 5px;
+  left: 15px;
+}
+
+/* Menu items */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 40px 0;
+  margin-bottom: 7px;
+}
+
+.menu-item {
+
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+  padding: 5px 0;
+  cursor: pointer;
+  position: relative; /* Needed for dropdown positioning */
+}
+
+.dropdown-icon {
+  display: flex;
+  float: right;
+  align-items: center; /* Aligns icon vertically */
+  justify-content: center; /* Centers icon horizontally */
+  font-size: 14px;
+  color: #ffffff;
+  transition: transform 0.3s;
+  border: 2px solid rgb(31, 236, 255);
+  background-color: rgb(31, 236, 255);
+  height: 20px;
+  width: 22px;
+  cursor: pointer;
+  margin-left: 10px; /* Adds spacing between the text and icon */
+}
+
+.menu-item.active .dropdown-icon {
+  transform: rotate(90deg);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-item p {
+  font-size: 15px;
+}
+
+.contact-item i {
+  margin-right: 10px;
+  color: white;
+  background-color: #00bcd4;
+  padding: 9px;
+  font-size: 12px;
+  border-radius: 50%;
+}
+
+.contact-info p {
+  font-size: 15px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons i {
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.3s;
+  padding-right: 12px;
+}
+
+.social-icons i:hover {
+  color: #00bcd4;
+}
+
+
+/* Dropdown menu styles */
+
+
+.dropdown-menu {
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  background: #16243d; /* Optional: Change background for dropdown menu */
+  
+
+}
+
+.dropdown-menu li {
+  padding: 8px;
+}
+
+
+
+/* Rotate icon when active */
+.dropdown-icon {
+  transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(90deg); /* Rotate 90 degrees */
+  background-color: white;
+  color: rgb(37, 87, 182);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+hr{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  opacity: 0.1;
+}

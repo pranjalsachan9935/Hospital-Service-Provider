@@ -1,0 +1,80 @@
+.header-1-container {
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Center items vertically */
+  height: 20px;
+  width: 100%;
+  background-color: #001f3f; /* Dark blue */
+  font-size: 13px;
+  color: #97a2b7;
+  line-height: 15px;
+  padding: 20px 40px; /* Add some horizontal padding */
+  box-sizing: border-box; /* Include padding in width/height calculations */
+}
+.commercial-p:hover{
+color: white;
+cursor: pointer;
+}
+
+/* Header left section */
+.header1-left {
+  display: flex;
+}
+
+.header1-left address {
+  margin: 0;
+  font-style: normal;
+  display: flex;
+  gap: 30px;
+}
+
+.header1-left p {
+  margin: 0;
+  font-size: 13px;
+  color: #97a2b7;
+  line-height: 15px;
+}
+
+.header1-left a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #97a2b7;
+  line-height: 15px;
+}
+
+/* Header right section */
+.header1-right {
+  display: flex;
+  align-items: center; /* Center icons and links vertically */
+  gap: 15px; /* Add spacing between items */
+}
+
+.header1-right a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #97a2b7;
+  line-height: 15px;
+}
+
+/* Social media icons */
+.header1-right i {
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.header1-right i:hover {
+  color: #0080ff; /* Highlight effect on hover */
+}
+
+.header-1-container a:hover {
+  color: white;
+}
+
+@media (max-width: 940px) {
+  .header-1-container{
+    display: none;
+  }
+}

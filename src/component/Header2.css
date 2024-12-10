@@ -1,0 +1,378 @@
+/* General Styling */
+header {
+  background-color: #ffffff; /* Dark blue */
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  padding: 30px 35px;
+  position: relative;
+  z-index: 3;
+  height: 60px;
+
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color:  #f2f6fb;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 77px;
+  padding: 2.5px;
+
+}
+
+/* Logo Styling */
+.nav-img {
+  cursor: pointer;
+  width: 140px;
+ height: 30px;
+ 
+}
+/* Navigation List */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Styling for the NEW label */
+nav ul li span {
+  position: absolute;
+  bottom: 77%;
+  left: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: rgb(48, 48, 210);
+  line-height: 1em;
+  padding: 3.5px 5.5px;
+  display: inline-block;
+  z-index: 2; /* Ensure the label is above the arrow */
+}
+
+/* Styling for the arrow (downward triangle) */
+nav ul li .hover-item {
+  position: relative;
+  padding-right: 20px; /* Make space for the arrow */
+}
+
+nav ul li span::after {
+  content: '';
+  position: absolute;
+  right: -3.4px;
+  bottom: -4.5px;
+  rotate: 225deg;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgb(48, 48, 210); /* Arrow color matching the "NEW" label */
+  visibility: visible; /* Always visible */
+}
+
+nav ul li .hover-item::after {
+  content: '▲';
+  position: absolute;
+  rotate: 360deg;
+  right: 47.5px;
+  bottom: 10px;
+  width: 0;
+  height: 0;
+  font-size: 12px;
+  color: rgb(54, 64, 211);
+  visibility: visible; /* Always visible */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(131, 131, 131);
+  font-size: 16px;
+  padding: 10px 15px;
+  display: inline-block;
+}
+
+
+/* Arrow for main nav item on hover */
+/* Arrow for main nav item on hover */
+nav > ul > li:hover::after {
+  content: "▲"; /* Add the arrow */
+  position: absolute;
+  bottom: -6px; /* Position it below the text */
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgb(54, 64, 211); /* Arrow color */
+  font-size: 12px; /* Arrow size */
+  transition: bottom 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li:hover a {
+  color: #000; /* Change the text color when hovered */
+}
+
+/* Hover item class */
+.hover-item {
+  position: relative;
+  color: #000; /* Text color */
+  cursor: pointer;
+}
+
+/* Dropdown Styling */
+nav ul li ul {
+
+  visibility: hidden; /* Hide it initially */
+  opacity: 0; /* Set opacity to 0 for fade effect */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 10;
+  padding: 20px 75px 20px 10px;
+  margin-top: 38.5px;
+  margin-left: 12px;
+  transform: translateY(-10px); /* Move it slightly upwards for the animation */
+  transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
+  flex-wrap: wrap; 
+  display: block; 
+  /* Allow wrapping of items */
+}
+
+nav ul li:hover > ul {
+  display: block; /* Show on hover */
+  visibility: visible; /* Make it visible */
+  opacity: 1; /* Set opacity to 1 to make it fully visible */
+  transform: translateY(0); /* Reset the translation to normal position */
+
+}
+
+/* Dropdown menu item */
+nav ul li ul li {
+
+  padding-right: 40px;
+  width: 100%;
+}
+
+
+nav ul li ul li:hover{
+  background-color: rgb(240, 240, 240);
+  border-radius: 8px;
+  
+}
+
+/* Dropdown item links */
+nav ul li ul li a {
+  display: block;
+  color: rgb(0, 0, 0);
+  position: relative;
+}
+
+/* Add the arrow (>) to the dropdown items, only on hover */
+nav ul li ul li a::after {
+  content: ">"; /* Add the arrow */
+  font-size: 16px;
+  color: transparent; /* Initially invisible */
+  margin-left: 5px; /* Space between text and the arrow */
+  transition: color 0.3s ease;
+  position: absolute;
+  right: -30px; /* Position the arrow at the right */
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+}
+
+/* Show the arrow when hovering over the dropdown item */
+nav ul li ul li:hover a::after {
+  color: blue; /* Change color when hovered */
+}
+
+nav ul li ul li a:hover {
+  color: #000;
+}
+
+
+
+.hamburger {
+ display: none;
+}
+
+@media (max-width: 1200px) {
+  nav{
+    display: none;
+  }
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0056a5;
+    padding-top: 7px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 45px;
+    margin-left: 70px;
+    background-color:  #f2f6fb;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}
+
+@media (max-width: 750px) {
+  header .header2{
+    display: none;
+  }
+
+  header .nav-right {
+   display: none;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0056a5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+    left: 115%;
+   
+  }
+  header {
+    width: 45%;
+  }
+  
+}
+
+
+
+
+/* Right Side Icons */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color:  #f2f6fb;
+  width: 190px;
+}
+
+.nav-right i {
+  font-size: 20px;
+  cursor: pointer;
+  color: black;
+}
+
+.nav-right p {
+  font-size: 14px;
+  cursor: pointer;
+  padding-right: 20px;
+  padding-left: 20px;
+  position: relative;
+}
+.nav-qoute{
+  background-color: #0056a5;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  font-weight: 600;
+  width: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.nav-qoute p {
+
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.nav-qoute::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgb(20, 20, 57);/* Hover background color *//* Fill color */
+  transition: height 0.5s ease; /* Smooth fill effect */
+  z-index: 0; /* Keeps it behind the text */
+}
+
+.nav-qoute:hover::before {
+  height: 100%; /* Fills the entire element from bottom to top */
+}
+
+.nav-qoute:hover p {
+  color: #fff; /* Changes text color on hover for better contrast */
+}
+
+/* Header Right Contact Info */
+
+
+
+
+.header2 {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  padding-left: 20px;
+
+}
+
+/* Right section container */
+.header2-right {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center-align the content horizontally */
+  gap: 5px; /* Space between items */
+  text-align: center;
+  width: 150px;
+}
+
+.header2-right .phone-no{
+  color: #000;
+
+}
+/* Icon styling */
+.header2 i {
+  font-size: 24px;
+  color: #00eaff;
+  cursor: pointer;
+  border: 2px solid rgb(230, 230, 230);
+  border-radius: 50%;
+  padding: 12px;
+}
+
+/* Text styles */
+.header2-right p {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+

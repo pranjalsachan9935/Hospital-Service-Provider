@@ -1,0 +1,30 @@
+.to-top i{
+  display: block;
+  position: fixed;
+  border: 2px solid #015fc9;
+  background-color:#015ec9;
+  color: white;
+  z-index: 99;
+  border-radius: 50%;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  text-align: center;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+}
+
+.stop-showing{
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .to-top i{
+    bottom: 60px; 
+    right: 80px;
+    width: 43px;
+    height: 43px;
+  }
+
+}
