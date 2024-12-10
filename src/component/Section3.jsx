@@ -67,7 +67,10 @@ const Section3 = () => {
 
       <div className="bottom-box">
         <div className="discover">
+          <div className='discover-left'>
           <button className="discover-botton">Discover More</button>
+          </div>
+        
           <i className="fa-solid fa-phone"></i>
           <div className="discover-right">
             <p>
@@ -75,6 +78,7 @@ const Section3 = () => {
             </p>
             <p style={{ fontSize: "14px" }}>Call to Our Expert</p>
           </div>
+     
         </div>
       </div>
     </div>
