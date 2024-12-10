@@ -1,4 +1,43 @@
 /* General Styling */
+
+
+.small-header i{
+  display: none;
+}
+
+@media (max-width: 750px) {
+
+  .small-header i{
+    display: block;
+    position: absolute;
+    font-size: 24px;
+    cursor: pointer;
+    color: #0056a5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 8px;
+ 
+    background-color: #f2f6fb;
+    left: 130%;
+    top: 36%;
+  }
+
+  .small-header img {
+   cursor: pointer;
+   width: 140px;
+   height: 30px;
+   display: block;
+  }
+  
+}
+
+.small-header img {
+  display: none;
+ }
+
+
 header {
   background-color: #ffffff; /* Dark blue */
   color: rgb(255, 255, 255);
@@ -241,9 +280,23 @@ nav ul li ul li a:hover {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
   }
+
+  .small-header img {
+    display: none;
+   }
 }
 
 @media (max-width: 750px) {
+ 
+
+  .nav-img {
+    cursor: pointer;
+    width: 140px;
+   height: 30px;
+
+  }
+
+
   header .header2{
     display: none;
   }
@@ -252,7 +305,7 @@ nav ul li ul li a:hover {
    display: none;
   }
   .hamburger {
-    display: block;
+    display: none;
     position: absolute;
     font-size: 24px;
     cursor: pointer;
