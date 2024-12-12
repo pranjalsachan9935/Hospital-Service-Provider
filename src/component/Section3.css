@@ -322,19 +322,18 @@
   color: rgb(110, 110, 110);
 }
 
-.section-3-right ul li::before {
+.section-3-right ul li i::before {
   content: "✔";
   color: #ffffff;
   background-color: rgb(0, 217, 255);
-  height: 20px;
-  width: 15px;
+  height: 14px;
+  width: 14px;
   border-radius: 50%;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding: 3px;
   font-size: 16px;
   position: absolute;
   left: -19px;
-  top: 3px;
+  top: 5px;
 }
 
 .discover {
