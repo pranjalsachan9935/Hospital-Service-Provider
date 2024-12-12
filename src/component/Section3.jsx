@@ -52,9 +52,9 @@ const Section3 = () => {
         </p>
       </div>
       <ul>
-        <li>Refresing to get such a personal touch.</li>
-        <li>Duis aute irure dolor in reprehenderit in voluptate.</li>
-        <li>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
+        <li><i class="fa-solid fa-check"></i>Refresing to get such a personal touch.</li>
+        <li><i class="fa-solid fa-check"></i>Duis aute irure dolor in reprehenderit in voluptate.</li>
+        <li><i class="fa-solid fa-check"></i>Velit esse cillum dolore eu fugiat nulla pariatur.</li>
       </ul>
 
       <div className="bottom-para">
