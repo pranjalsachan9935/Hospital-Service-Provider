@@ -1,10 +1,13 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./CustomCursor.css";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
+  const [isClicked, setIsClicked] = useState(false);
+
 
   useEffect(() => {
+   
     const handleMouseMove = (e) => {
       if (cursorRef.current) {
         cursorRef.current.style.left = `${e.clientX}px`;
@@ -12,18 +15,10 @@ const CustomCursor = () => {
       }
     };
 
-    const handleClick = (e) => {
-      const clickEffect = document.createElement("div");
-      clickEffect.className = "click-effect";
-      clickEffect.style.left = `${e.clientX}px`;
-      clickEffect.style.top = `${e.clientY}px`;
-      document.body.appendChild(clickEffect);
-
-      setTimeout(() => {
-        clickEffect.remove();
-      }, 500);
+    const handleClick = () => {
+      setIsClicked(true);
+      setTimeout(() => setIsClicked(false), 200); 
     };
-
     document.addEventListener("mousemove", handleMouseMove);
     document.addEventListener("click", handleClick);
 
@@ -35,7 +30,8 @@ const CustomCursor = () => {
 
   return (
     <div ref={cursorRef} className="cursor">
-      <div className="cursor-dot"></div>
+    
+      <div className={`cursor-dot ${isClicked ? "grow" : ""}`}></div>
     </div>
   );
 };
