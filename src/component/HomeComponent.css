@@ -1,17 +1,21 @@
 .text-overlay {
-  position: absolute; 
+  position: absolute;
   top: 0;
   bottom: 0;
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.813) , rgba(255, 255, 255, 0));
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.813),
+    rgba(255, 255, 255, 0)
+  );
   left: 0;
-  width: 540px; 
+  width: 540px;
   height: 100%;
-  color: #151515f0; 
+  color: #151515f0;
   display: flex;
-  justify-content: center; 
-  z-index: 1; 
-  border-radius: 0 10px 10px 0; 
-  padding-left: 70px
+  justify-content: center;
+  z-index: 1;
+  border-radius: 0 10px 10px 0;
+  padding-left: 70px;
 }
 .fixed-line-1:before {
   content: "";
@@ -26,11 +30,16 @@
 }
 
 .text-overlay h2 {
+  position: absolute;
+  left: 10%;
+  top: 19%;
   font-size: 80px;
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 80px;
   margin: 0;
+  animation:  slideDown 3s ease-out infinite;
+  animation-fill-mode: forwards;
 }
 .text-overlay span {
   font-size: 80px;
@@ -38,33 +47,43 @@
   letter-spacing: -0.04em;
   line-height: 80px;
   color: blue;
+  animation:  slideDown 3s ease-out infinite;
+  animation-fill-mode: forwards;
 }
 
 .text-overlay p {
+  position: absolute;
+  bottom: 29%;
   color: rgb(88, 88, 88);
   font-size: 18px;
   letter-spacing: 0.01em;
+  animation:  slideUp 3s ease-out infinite;
+  animation-fill-mode: forwards; 
+  left: 10%;
 }
 
-
 .started-button {
-  position: relative; 
   margin-top: 10px;
+  position: absolute;
+  bottom: 19%;
+  left: 10%;
 }
 
 .started-button button {
   padding: 18px 40px;
   font-size: 16px;
-  background-color:#015fc9;
+  background-color: #015fc9;
   color: white;
   font-weight: bold;
   border-radius: 8px;
   border: none;
   align-self: flex-start;
   cursor: pointer;
-  position: relative; 
-  overflow: hidden; 
-  z-index: 1; 
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  animation:  slideUp 3s ease-out infinite;
+  animation-fill-mode: forwards; 
 }
 
 .started-button button::before {
@@ -73,79 +92,82 @@
   background: rgb(17, 17, 45);
   width: 100%;
   height: 100%;
-  bottom: 0; 
+  bottom: 0;
   left: 0;
-  transform: translateY(100%); 
-  transition: transform 0.4s ease; 
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
   z-index: -1;
 }
 
 .started-button button:hover::before {
-  transform: translateY(0); 
+  transform: translateY(0);
 }
 
 .started-button button:hover {
   color: white;
 }
 
-
-.top-overlay {
-  position: absolute;
-  top: -100%;
+/* .top-overlay {
   width: 100%;
-  animation: slideDown 5s ease-in-out infinite;
-}
+  animation:  slideDown 3s ease-out infinite;
+  animation-fill-mode: forwards;
+} */
 
-
-.bottom-overlay {
-  position: absolute;
-  bottom: -100%;
+/* .bottom-overlay {
+  animation:  slideUp 3s ease-out infinite;
   width: 100%;
-  animation: slideUp 5s ease-in-out infinite;
-}
+  animation-fill-mode: forwards; 
+} */
+
 
 @keyframes slideDown {
   0% {
-    top: -100%;
+    transform: translateY(-100%); /* Start off-screen */
     opacity: 0; /* Fully transparent */
   }
   50% {
-    top: 25;
-    opacity: 0; /* Fully visible */
+    transform: translateY(0); /* Midway position */
+    opacity: 1; /* Fully visible */
   }
   100% {
-    top: 20%;
-    opacity: 1; /* Fade out */
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Fully visible */
   }
 }
 
 @keyframes slideUp {
   0% {
-    bottom: -100%; /* Off-screen */
-    opacity: 0;
+    transform: translateY(100%); /* Start off-screen */
+    opacity: 0; /* Fully transparent */
   }
   50% {
-    bottom: 25; /* Animate into position */
-    opacity: 0;
+    transform: translateY(0); /* Midway position */
+    opacity: 1; /* Fully visible */
   }
   100% {
-    bottom: 20%; /* Stay stable */
-    opacity: 1; 
+    transform: translateY(0); /* Final position */
+    opacity: 1; /* Fully visible */
   }
 }
 
-
-
 @media (max-width: 780px) {
 
+  .started-button {
+    margin-top: 10px;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+  } 
   .text-overlay h2 {
     font-size: 50px;
     line-height: 50px;
     margin: 0;
-    
+    top: 21%;
+  }
+  .text-overlay p {
+    bottom: 31%;
   }
   .text-overlay span {
-
     font-size: 50px;
     line-height: 50px;
     color: blue;
@@ -155,10 +177,9 @@
   section .button-container {
     display: none;
   }
- .text-overlay {
-  padding-left: 30px;
-      width: 600px; ;
-      
+  .text-overlay {
+    padding-left: 30px;
+    width: 600px;
   }
   .fixed-line-1:before {
     top: -12px;
@@ -167,12 +188,10 @@
   }
 
   .bottom-overlay p {
-   width: 400px;
-   max-width: 100%;
-   align-items: center;
-  
+    width: 400px;
+    max-width: 100%;
+    align-items: center;
   }
-
 }
 
 .button-container {
@@ -324,10 +343,6 @@
 
 /* Section 3 */
 
-
-
-
-
 @media (max-width: 900px) {
   .section-2-cards {
     display: flex;
@@ -349,15 +364,11 @@
     overflow: hidden; /* Ensure the pseudo-element stays within the card */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
- 
- 
-  
 }
 
 /* section 4*/
-.section-4{
+.section-4 {
   padding-bottom: 100px;
-
 }
 
 .container {
@@ -367,7 +378,6 @@
   align-items: flex-start;
   gap: 20px; /* Adds spacing between sections */
   margin: 20px;
- 
 }
 
 .left,
@@ -394,26 +404,23 @@
 }
 
 .left h2 {
-
   font-size: 40px;
   line-height: 55px;
   margin: 0;
-  
 }
 
 .right p {
   font-size: 18px;
   line-height: 30px;
   color: grey;
-  
 }
 
 @media (max-width: 900px) {
   /* For screens smaller than 768px */
   .container {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
-    
+
     margin: 0;
     /* Stack items vertically */
   }
@@ -501,7 +508,12 @@
   width: 45px;
   left: 24px;
   height: 4px;
-  background: linear-gradient(130deg, #0469ff, #00bfff 41.07%, #12efffa2 76.05%);
+  background: linear-gradient(
+    130deg,
+    #0469ff,
+    #00bfff 41.07%,
+    #12efffa2 76.05%
+  );
   z-index: 999;
 }
 
@@ -556,9 +568,8 @@
     width: 100%; /* 1 card per row */
   }
 
-  .fixed-card-content h3,p {
+  .fixed-card-content h3,
+  p {
     text-align: start;
   }
-
-  
 }
