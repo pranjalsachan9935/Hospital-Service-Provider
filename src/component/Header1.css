@@ -1,15 +1,15 @@
 .header-1-container {
   display: flex;
-  justify-content: space-between; /* Align items to the left and right */
-  align-items: center; /* Center items vertically */
+  justify-content: space-between; 
+  align-items: center; 
   height: 20px;
   width: 100%;
-  background-color: #001f3f; /* Dark blue */
+  background-color: #001f3f; 
   font-size: 13px;
   color: #97a2b7;
   line-height: 15px;
-  padding: 20px 40px; /* Add some horizontal padding */
-  box-sizing: border-box; /* Include padding in width/height calculations */
+  padding: 20px 40px; 
+  box-sizing: border-box; 
 }
 .commercial-p:hover{
 color: white;
@@ -45,8 +45,8 @@ cursor: pointer;
 /* Header right section */
 .header1-right {
   display: flex;
-  align-items: center; /* Center icons and links vertically */
-  gap: 15px; /* Add spacing between items */
+  align-items: center;
+  gap: 15px; 
 }
 
 .header1-right a {
@@ -66,7 +66,7 @@ cursor: pointer;
 }
 
 .header1-right i:hover {
-  color: #0080ff; /* Highlight effect on hover */
+  color: #0080ff; 
 }
 
 .header-1-container a:hover {
