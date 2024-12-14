@@ -8,6 +8,7 @@ import Claim from "./page/Claim";
 import SlidetoTop from "./component/SlidetoTop";
 import Sidebar from "./component/Sidebar";
 import Loading from "./component/Loading";
+import CustomCursor from "./component/CustomCursor";
 const App = () => {
 
   
@@ -21,6 +22,7 @@ const App = () => {
   return (
     <>
       <Suspense fallback={<Loading/>}>
+      <CustomCursor/>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout handleTop={handleTop} />} />
