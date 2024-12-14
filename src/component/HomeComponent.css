@@ -155,7 +155,7 @@
   .text-overlay {
     background-image: linear-gradient(
       to right,
-      rgba(255, 255, 255, 0.991),
+       rgb(255, 255, 255),
       rgba(255, 255, 255, 0.468)
     );
 
