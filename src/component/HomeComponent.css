@@ -31,7 +31,7 @@
 
 .text-overlay h2 {
   position: absolute;
-  left: 10%;
+  left: 9%;
   top: 19%;
   font-size: 80px;
   font-weight: 400;
@@ -59,14 +59,14 @@
   letter-spacing: 0.01em;
   animation:  slideUp 3s ease-out infinite;
   animation-fill-mode: forwards; 
-  left: 10%;
+  left: 9%;
 }
 
 .started-button {
   margin-top: 10px;
   position: absolute;
-  bottom: 19%;
-  left: 10%;
+  bottom: 18%;
+  left: 9%;
 }
 
 .started-button button {
@@ -152,20 +152,34 @@
 
 @media (max-width: 780px) {
 
+  .text-overlay {
+    background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.991),
+      rgba(255, 255, 255, 0.468)
+    );
+
+     width: 540px;
+  height: 100%;
+   
+  }
+
   .started-button {
     margin-top: 10px;
     position: absolute;
     bottom: 20%;
-    left: 10%;
+    left: 2%;
   } 
   .text-overlay h2 {
     font-size: 50px;
     line-height: 50px;
     margin: 0;
     top: 21%;
+    left: 2%;
   }
   .text-overlay p {
-    bottom: 31%;
+    bottom: 34%;
+    left: 2%;
   }
   .text-overlay span {
     font-size: 50px;
