@@ -1,11 +1,10 @@
 .section-3 {
   display: flex;
   flex-wrap: wrap;
-  gap: 1px;
+  gap: 95px;
   padding: 20px;
-  background-color: #f2f2f2;
   max-width: 1200px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .section-3-left {
@@ -22,7 +21,7 @@
 }
 
 .section-3-left img:nth-child(1) {
-  position: relative; /* Bottom image */
+  position: absolute; 
   left: 55px;
   opacity: 0.5;
   top: 100px;
@@ -33,8 +32,8 @@
 }
 
 .section-3-left img:nth-child(2) {
-  position: absolute;
-  top: 10%; /* Adjust to overlap */
+  position: relative;
+  top: 79px; 
   width: 500px;
   height: 450px;
   left: 30px;
@@ -44,19 +43,22 @@
 }
 
 .section-3-left img:nth-child(3) {
-  position: relative;
+  position: absolute;
   z-index: 3;
   width: 330px;
   height: 310px;
   border-radius: 10px;
   left: -56px;
-  bottom: 102px;
+  top: 53%;
+}
+.mid-image{
+  display: none;
 }
 
 .experience-label {
-  position: relative;
-  bottom: -474px;
-  left: -485px;
+  position: absolute;
+  top: 80.5%;
+  left: 3%;
   display: flex;
   align-items: center;
   background-color: #015fc9;
@@ -85,6 +87,19 @@
   letter-spacing: -0.02em;
 }
 
+.experience-label::before{
+  position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    content: "";
+    border: 2px dashed rgb(0, 221, 255);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
 .experience-label::after {
   content: "◤";
   position: absolute;
@@ -97,14 +112,21 @@
   visibility: visible; /* Always visible */
 }
 
-.hidden-image-mid {
-  display: none;
+
+
+.section-3-780 img{
+display: none;
+}
+.experience-label-780 {
+ display: none;
 }
 
-.experience-label-hidden {
-  display: none;
-}
+
 @media (max-width: 780px) {
+  .section-3 {
+    gap: 0px;
+  }
+  
   .section-3-left {
     flex: 1;
     display: flex;
@@ -114,25 +136,40 @@
   .section-3-left img:nth-child(3) {
     display: none;
   }
-
   .section-3-left img:nth-child(1) {
     display: none;
   }
   .section-3-left img:nth-child(2) {
     display: none;
   }
-  .hidden-image-mid {
-    display: flex;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 500px;
-    position: relative;
-  }
+  
 
-  .experience-label {
+  .section-3-780 img{
+    display: flex;
     position: relative;
-    top: -48.5px;
-    left: 50%;
+    width: 100%;
+    max-width: 535px;
+    height: auto;
+    object-fit: cover;
+    z-index: 2;
+    border-radius: 10px;
+  }
+  .experience-label{
+    display: none;
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+  .experience-label::after{
+    display: none;
+  }
+ 
+  .experience-label-780 {
+    display: flex;
+    position: relative;
+    width: 200px;
+    top: -47px;
+    display: flex;
     align-items: center;
     background-color: #015fc9;
     border-top-left-radius: 10px;
@@ -144,14 +181,14 @@
     color: white;
     height: 100px;
   }
-  .experience-label h2 {
+  .experience-label-780 h2 {
     font-size: 60px;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: -0.02em;
   }
 
-  .experience-label p {
+  .experience-label-780 p {
     font-size: 20px;
     line-height: 24px;
     font-weight: 500;
@@ -159,7 +196,20 @@
     letter-spacing: -0.02em;
   }
 
-  .experience-label::after {
+  .experience-label-780::before{
+    position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      content: "";
+      border: 2px dashed rgb(0, 221, 255);
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+  }
+
+  .experience-label-780::after {
     content: "◤";
     position: absolute;
     right: 6px;
@@ -168,56 +218,53 @@
     color: #00bfff;
     width: 0;
     height: 0;
-    visibility: visible; /* Always visible */
+    visibility: visible;
   }
 
   .section-3-right {
     max-width: 600px;
     margin: 0px auto 0;
   }
+ 
 }
 
 @media (max-width: 1200px) {
-  .section-3-left img {
-    max-width: 100%;
-  }
 
   .section-3-left img:nth-child(1) {
-    position: relative; /* Bottom image */
+    position: absolute; 
     left: 55px;
     opacity: 0.5;
     top: 100px;
     z-index: 1;
-    width: 500px;
-    height: 470px;
+    width: 720px;
+    height: 498px;
     border-radius: 10px;
   }
-
+  
   .section-3-left img:nth-child(2) {
-    position: absolute;
-    top: 10%; /* Adjust to overlap */
-    width: 500px;
-    height: 510px;
-    left: 30.5px;
+    position: relative;
+    top: 79px; 
+    width: 700px;
+    height: 540px;
+    left: 30px;
     object-fit: cover;
     z-index: 2;
     border-radius: 10px;
   }
-
+  
   .section-3-left img:nth-child(3) {
-    position: relative;
+    position: absolute;
     z-index: 3;
-    width: 340px;
-    height: 320px;
+    width: 350px;
+    height: 330px;
     border-radius: 10px;
-    left: -53.5px;
-    bottom: 102px;
+    top: 73%;
   }
-
+  
   .experience-label {
-    position: relative;
-    bottom: 249.5px;
-    left: -92.5px;
+    position: absolute;
+    top: 106%;
+    left: 5.9%;
     display: flex;
     align-items: center;
     background-color: #015fc9;
@@ -230,14 +277,14 @@
     color: white;
     height: 100px;
   }
-
+  
   .experience-label h2 {
     font-size: 60px;
     font-weight: 700;
     line-height: 60px;
     letter-spacing: -0.02em;
   }
-
+  
   .experience-label p {
     font-size: 20px;
     line-height: 24px;
@@ -245,7 +292,7 @@
     margin-left: 18px;
     letter-spacing: -0.02em;
   }
-
+  
   .experience-label::after {
     content: "◤";
     position: absolute;
@@ -257,14 +304,18 @@
     height: 0;
     visibility: visible; /* Always visible */
   }
+
 }
+
+
 
 .section-3-right {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 500px;
 }
 
 .right-title {
@@ -441,7 +492,7 @@
 
   .section-3-right {
     max-width: 100%;
-    width: 560px;
+    width: 535px;
     position: relative;
   }
 }
