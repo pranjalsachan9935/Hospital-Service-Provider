@@ -192,6 +192,11 @@
     display: none;
   }
   .text-overlay {
+    background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.968),
+    rgba(255, 255, 255, 0)
+  );
     padding-left: 30px;
     width: 600px;
   }
