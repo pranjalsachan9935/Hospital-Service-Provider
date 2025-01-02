@@ -1,15 +1,14 @@
-/* Footer container */
 footer {
   display: flex;
-  flex-wrap: wrap; /* Ensure responsiveness */
+  flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #0d2242; /* Dark blue background */
-  color: #b9b9b9; /* White text */
+  background-color: #0d2242;
+  color: #b9b9b9;
   padding: 50px 40px;
-  gap: 20px; /* Spacing between items */
+  gap: 20px;
+  flex-direction: row;
 }
 
-/* General text styling */
 footer p,
 footer a {
   font-family: "Arial", sans-serif;
@@ -21,30 +20,29 @@ footer h3 {
   color: white;
 }
 
-/* Footer cart sections */
 .footer-cart-1,
 .footer-cart-2,
 .footer-cart-3,
 .footer-cart-4 {
-  flex: 1 1 250px; /* Ensures equal sizing on wider screens */
-  max-width: 286px;
+  flex: 1 1 250px;
 }
 
-/* Footer cart 1 (Logo and Socials) */
+
 .footer-cart-1 img {
   display: block;
   margin-bottom: 40px;
   height: 35px;
   width: auto;
   padding-top: 15px;
-}
+} 
+
 
 .footer-cart-1 p {
   line-height: 1.8;
   letter-spacing: 0.02em;
   margin-bottom: 40px;
   font-size: 14.9px;
-  opacity: 1; /* Slightly dimmed */
+  opacity: 1;
   color: rgb(241, 250, 255);
 }
 
@@ -60,25 +58,10 @@ footer h3 {
 
 .footer-cart-1 a:hover {
   color: #1da1f2;
-  background-color: white; /* Twitter blue as example */
+  background-color: white;
   border: 2px solid rgb(255, 255, 255);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Footer cart 2 (Contact) */
 .footer-cart-2 h3 {
   margin-bottom: 40px;
   font-size: 19px;
@@ -86,7 +69,7 @@ footer h3 {
 }
 
 .footer-cart-2 address {
-  font-style: normal; /* Removes default italic style */
+  font-style: normal;
   margin-bottom: 20px;
 }
 
@@ -108,7 +91,7 @@ footer h3 {
   color: white;
 }
 .footer-cart-2 address span i {
-  color: #0057da; /* Blue color for icons */
+  color: #0057da;
   margin-right: 10px;
 }
 
@@ -123,12 +106,11 @@ footer h3 {
   top: 2px;
   font-size: 11px;
 }
-
+  
 .open-hour-address {
   line-height: 25px;
 }
 
-/* Footer cart 3 (Instagram images) */
 .footer-cart-3 {
   display: flex;
   flex-direction: column;
@@ -138,7 +120,6 @@ footer h3 {
 .footer-cart-3 h3 {
   margin-bottom: 40px;
   font-size: 19px;
- 
 }
 
 .footer-cart-3 div {
@@ -147,13 +128,12 @@ footer h3 {
   flex-wrap: wrap;
 }
 
-
 .footer-hover-img {
   position: relative;
   width: 80px;
   height: auto;
   overflow: hidden;
-  border-radius: 8px; /* Optional for rounded corners */
+  border-radius: 8px;
 }
 
 .footer-hover-img img {
@@ -161,42 +141,39 @@ footer h3 {
   height: 100%;
   object-fit: cover;
   display: block;
-
 }
 
 .footer-image-overlay {
   position: absolute;
-  top: -100%; /* Initially outside the image */
+  top: -100%;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0d6dfde2; /* Blue overlay with transparency */
+  background-color: #0d6dfde2;
   transition: top 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 .footer-image-overlay i {
   cursor: pointer;
   font-size: 24px;
   color: white;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(50px); /* Start below the visible area */
-  transition: opacity 0.3s ease, transform 0.7s ease 0.5s; /* Delay to match overlay animation */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.3s ease, transform 0.7s ease 0.5s;
 }
 
 .footer-hover-img:hover .footer-image-overlay {
-  top: 0; /* Slide overlay down to fully cover the image */
+  top: 0;
 }
 
 .footer-hover-img:hover .footer-image-overlay i {
-  opacity: 1; /* Fade in the icon */
-  transform: translateY(0); /* Slide icon up to the center */
+  opacity: 1;
+  transform: translateY(0);
 }
 
-/* Footer cart 4 (Newsletter) */
 .footer-cart-4 h3 {
   margin-bottom: 40px;
   font-size: 19px;
@@ -212,9 +189,11 @@ footer h3 {
   display: flex;
   align-items: center;
   margin-top: 10px;
-  background: #162946fc; /* Darker background for email input */
+  background: #162946fc;
   padding: 7px 10px;
   border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .footer-cart-4 .input-email input {
@@ -233,7 +212,6 @@ footer h3 {
   cursor: pointer;
 }
 
-/* Header Right Contact Info */
 .footer2-right {
   display: flex;
   align-items: center;
@@ -255,16 +233,14 @@ footer h3 {
   padding-left: 0px;
 }
 
-/* Right section container */
 .footer2-right {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: center; /* Center-align the content horizontally */
-  gap: 0px; /* Space between items */
+  flex-direction: column;
+  align-items: center;
+  gap: 0px;
   text-align: center;
 }
 
-/* Icon styling */
 .footer2 i {
   font-size: 35px;
   color: #00d5ff;
@@ -276,7 +252,6 @@ footer h3 {
   letter-spacing: 0.07em;
 }
 
-/* Text styles */
 .footer2-right p {
   margin: 0;
   font-size: 14px;
@@ -285,7 +260,6 @@ footer h3 {
   align-self: flex-start;
 }
 
-/* Footer copyright */
 .copyright p {
   text-align: center;
   margin-top: 40px;
@@ -317,7 +291,7 @@ footer h3 {
   }
 
   .footer-cart-2 address {
-    font-style: normal; /* Removes default italic style */
+    font-style: normal;
     margin-bottom: 20px;
   }
 
