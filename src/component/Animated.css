@@ -85,18 +85,21 @@
   font-size: 36px;
   font-weight: 700;
   z-index: 1;
+  position: relative;
 }
 
 .animated-content p {
+  position: relative;
   margin: 0;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 24px;
   font-weight: 500;
   color: rgb(183, 211, 255);
+  z-index: 1;
 }
 
-/* Button styling */
+
 .track-btn {
   background-color: #fff;
   color: #1f1f1f;
@@ -110,7 +113,7 @@
   z-index: 1;
   position: relative;
   overflow: hidden;
-  transition: background 0.4s ease-out; /* Smooth transition */
+  transition: background 0.4s ease-out; 
 }
 
 .track-btn::before {
@@ -120,8 +123,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(20, 20, 57);/* Hover background color */
-  transition: top 0.4s ease-out; /* Smooth transition */
+  background: rgb(20, 20, 57);
+  transition: top 0.4s ease-out;
   z-index: -1;
   
  border-top-left-radius: 8px;
@@ -129,16 +132,15 @@
 }
 
 .track-btn:hover::before {
-  top: 0; /* Move the background from bottom to top */
+  top: 0; 
   height: 100%; 
 }
 
 .track-btn:hover {
-  color: #fff; /* Optional: Change text color on hover */
+  color: #fff; 
 }
 
 
-/* Responsive design for smaller screens */
 
 @media (max-width: 1150px) {
   .animated-container {
@@ -158,11 +160,41 @@
     margin-right: 10%;
     height: 230px;
   }
+
+  .tracking-img img {
+    width: 220px;
+    height: 220px;
+    opacity: 0.8;
+  }
+  
+  .tracking-img-1 {
+    top: 10px;
+    left: -70px;
+  }
+  
+  .tracking-img-4 {
+    top: 30px;
+    left: -15%;
+  }
+  
+  .tracking-img-3 {
+    bottom: 5px;
+    left: 70%;
+  }
+  
+  .tracking-img-2 {
+    bottom: 50px;
+    left: 80%;
+  }
 }
 
 
 
 @media (max-width: 768px) {
+
+  .tracking-img-1, .tracking-img-2, .tracking-img-3, .tracking-img-4{
+    display: none;
+  }
 
   .animated-most-outer{
     display: flex;
